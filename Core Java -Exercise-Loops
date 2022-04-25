@@ -1,0 +1,88 @@
+public class jnhbgfgyhuij {
+
+	public static void main(String[] args) {
+		for( int i=0; i< 11; i++) {
+			System.out.println(i);
+		}
+		 int num = 0;
+		    while(num <= 100) {
+		      System.out.println(num);
+		      num += 10;
+		    }
+		int a =0;
+		do {
+			System.out.println(a);
+			a++;}
+		while(a<10);
+		}
+	public static void Continue(){ 
+        for(int i=1; i<=100; i++){
+            if(i>=25 && i<=75)
+              continue;
+            if ( i % 5 == 0)
+              System.out.print(i+" ");
+        }
+        System.out.println();
+    }
+	 public static void Break(){ 
+	        for(int i=1; i<=100; i++){
+	             if(i>=50)
+	              break;
+	            if ( i % 5 == 0)
+	              System.out.print(i+" ");
+	        }
+	        System.out.println();
+	    }
+	 public static void Nested(){ 
+	        for(int i=1; i<=2; i++){
+	            System.out.print("Week "+i+":");
+	           for(int j=1; j<=5; j++){
+	               System.out.print(" Day "+j);
+	           }
+	           System.out.println();
+	        }
+	        
+	    } public static void palindrome(){ 
+	        int rev;
+	        for(int i=10; i<=200; i++){
+	            int num = i;
+	            rev = 0;
+	           while(num > 0){
+	               rev =  rev * 10 + num % 10;
+	               num = num / 10;
+	           }
+	           if(i == rev)
+	            System.out.print(i+", ");
+	        }
+	        System.out.println();
+	    }
+	    
+	}
+class programsix{  
+		 static int n1=0,n2=1,n3=0;    
+		 static void printFibonacci(int count){    
+		    if(count>0){    
+		         n3 = n1 + n2;    
+		         n1 = n2;    
+		         n2 = n3;    
+		         System.out.print(" "+n3);   
+		         printFibonacci(count-1);    
+		     }    
+		 }    
+		 public static void main(String args[]){    
+		  int count=10;    
+		  System.out.print(n1+" "+n2);   
+		  printFibonacci(count-2);
+		 }  
+		}  
+public class programSeven {
+    public static void main(String[] args) {
+        for(int i=1;i<=3;i++){
+            for(int j=1;j<=3;j++){
+                    System.out.println("Inner loop i:"+i+" j:"+j);
+            }
+        }
+    }
+}
+
+
