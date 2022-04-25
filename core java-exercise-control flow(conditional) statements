@@ -1,0 +1,77 @@
+package controlflowassignment;
+
+import java.util.Scanner;
+
+public class controlflowassignment {
+
+	public static void main(String[] args) {
+		int x=7;
+		if(x<10) {
+			System.out.print("Less than 10");
+		} else if (x>10) {
+			System.out.print("More than 10");
+		};
+		int problemThree = 15;
+		if (problemThree < 10) {
+			System.out.print("Less than 10");}
+			else if(problemThree >10 && problemThree<20) {
+				System.out.print("Between 10 and 20"); 
+			}else if (problemThree >= 20){
+				{System.out.print("Greater or equal than 20");
+			}
+		}
+		int problemFour = 15;
+		if(problemFour < 10 || problemFour > 20) {
+			System.out.print("Out of Range");
+		} else if(problemFour >=10 && problemFour <=  20) {
+			System.out.print("In range");
+		}
+	
+		Scanner userGrade = new Scanner(System.in);
+		System.out.println("What is your percentage of grades?");
+		int percentage=userGrade.nextInt();
+		if(percentage > 90 && percentage <100) {
+			System.out.print("A");
+		}else if(percentage >80 && percentage <89) {
+			System.out.print("B");
+		}else if(percentage >70 && percentage <79) {
+			System.out.print("C");
+		}else if(percentage > 60 && percentage < 69) {
+			System.out.print("D");
+		}else if(percentage < 60) {
+			System.out.print("F");
+		}else if(percentage < 0 && percentage > 100) {
+			System.out.print("Score out of range");
+		}
+		
+		Scanner weekDay = new Scanner(System.in);
+		System.out.println("Pick a number between 1 - 7");
+		int day = weekDay.nextInt();
+		switch(day) {
+		case 1: System.out.print("Sunday");
+		break;
+		case 2:System.out.print("Monday");
+		break;
+		case 3: System.out.print("Tuesday");
+		break;
+		case 4: System.out.print("Wednesday");
+		break;
+		case 5: System.out.print("Thursday");
+		break;
+		case 6:System.out.print("Friday");
+		break;
+		case 7: System.out.print("Saturday");
+		break;
+		default: System.out.print("out of range");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+}}
