@@ -1,0 +1,55 @@
+public class javaPracticeVariables {
+  public static void main(String[] args) {
+    int a = 5;
+    int b = 6;
+    int results = a + b;
+    System.out.println(results);
+  }
+};
+public class javaPracticeVariables {
+  public static void main(String[] args) {
+    int a = 5;
+    int b = 6;
+    int results = a + b;
+    System.out.println(results);
+  
+    double c = 11.35;
+    double d = 33.12;
+    double resultstwo = c + d;
+    System.out.println(resultstwo + " The variable of the sum is a double!");
+
+    int e = 6;
+    double f = 12.12;
+    double resultsthree = e + f;
+    System.out.println(resultsthree);
+
+    int g = 50;
+    int h = 10;
+    int resultsfour = g / h;
+    System.out.println(resultsfour + " When the big number is changed to an decimal, the results are an error, the code doesn't run. The corrections that are needed is to change the big number and result variable to a double.");
+
+    double I = 12.53;
+    double j = 93.12;
+    double resultsfive = j / I;
+    System.out.println(resultsfive + " If the results variable were to be changed to an int, both the first and second variable must be integer or be able to perfectly divide another without a remainder. Otherwise, the results will be an error");
+
+    int x = 5;
+    double y = 6;
+    double q = y/x;
+    System.out.println(q);
+
+  final  double firstNumber = 3.14; 
+  final double secondNumber = 5.12;    
+  System.out.println(firstNumber + secondNumber);
+
+  double iceTea = 3.12;
+  double coffee = 4.75;
+  double cheesecake = 3.52;
+  double subtotal = (3 * iceTea) + (4 * coffee) + (2 * cheesecake) ;
+  double sales_tax = subtotal * 0.7;
+  double totalSale = subtotal + sales_tax;
+  
+
+  
+  }
+};
