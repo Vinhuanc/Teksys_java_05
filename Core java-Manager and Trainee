@@ -1,0 +1,60 @@
+package inheritanceHW;
+public class Employee {
+	long employeeId;
+	String employeeName;
+	String employeeAddress;
+	long employeePhone;
+	static double basicSalary;
+	static double specialAllowance;
+	static double Hra;
+    double salary;
+	
+	public Employee(long Id, String Name, String address, long phone) {
+		this.employeeId=Id;
+		this.employeeName=Name;
+		this.employeeAddress=address;
+		this.employeePhone=phone;
+	}
+	public static double calculateSalary() {
+		double salary = basicSalary + (basicSalary * specialAllowance/100) + (basicSalary * Hra/100);
+		
+		return salary;
+	}
+	public static void main(String[] args) {
+	
+		
+		
+		System.out.print(calculateSalary());
+	
+		
+		
+		
+		
+		
+	
+}
+}
+package SalaryCalculator;
+
+		public class manager extends Employee {
+
+		   protected static double getBasicSalary() {
+		       return basicSalary;
+		   }
+		   protected static void setBasicSalary(double basicSalary) {
+		       Manager.basicSalary = basicSalary;
+		   }
+		  
+		   @Override
+		   public double calculateTransportAllowance () {
+		       double transportAllowance = 15 * basicSalary/100;  
+		       return transportAllowance;
+		   }
+
+		}
+
+
+
+	
+
+
