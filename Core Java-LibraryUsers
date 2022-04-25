@@ -1,0 +1,126 @@
+package library;
+
+public class AdultUser {
+	static int age;
+	String bookType;
+	
+	public AdultUser(int AdultAge, String bookPreference) {
+		age=AdultAge;
+		bookType=bookPreference;
+	}
+
+	public static void registerAccount() {
+		if(age>12) {
+			System.out.println("You have successfully registered under an Adult Account");
+		if(age<12) {
+			System.out.println("Sorry, Age must be greater than 12 to register as an adult");
+		}
+		}
+	}
+	
+	public void requestBook() {
+		if(bookType =="Fiction")
+			System.out.println("Book issued successfully, please return the book within 7 days");
+		if(bookType !="Fiction") {
+			System.out.println("Oops, you are allowed to take only adult Fiction books");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static void setage(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void setbookType(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+package library;
+
+public class libraryDemo {
+
+	public static void main(String[] args) {
+		KidUsers.setage(10);
+		KidUsers.registerAccount();
+		KidUsers.setage(18);
+		KidUsers.registerAccount();
+		KidUsers.setbookType("Kids");
+		KidUsers.setbookType("Fiction");
+		
+		AdultUser.setage(5);
+		AdultUser.registerAccount();
+		AdultUser.setage(23);
+		AdultUser.registerAccount();
+		AdultUser.setbookType("Kids");
+		AdultUser.setbookType("Fiction");
+		
+		
+	}
+	
+	
+
+}
+package library;
+
+import java.util.Scanner;
+
+public class KidUsers implements libraryUser{
+	static int age;
+	String bookType;
+	
+	public KidUsers(int kidAge, String bookPreference) {
+		age=kidAge;
+		bookType=bookPreference;
+	}
+	public static void registerAccount() {
+		Scanner userInput = new Scanner(System.in);
+		System.out.print("What is your age?");
+			int age = userInput.nextInt();
+			if(age < 12) {
+				System.out.println("You have successfully registered under a Kids Account");}
+				else {
+				System.out.println("Sorry, Age must be less than 12 to register as a kid");
+			}
+		}
+	public void requestBook() {
+			if(bookType =="Kids")
+				System.out.println("Book Issued successfully, please return teh book within 10 days");
+			if(bookType != "Kids") {
+				System.out.println("Oops, you are allowed to take only kids books");
+			}
+				
+	}
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+			
+	}
+	public static void setage(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+	public static void setbookType(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
