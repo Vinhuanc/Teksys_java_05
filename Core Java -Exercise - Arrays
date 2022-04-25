@@ -1,0 +1,71 @@
+package canvascode;
+
+import java.util.Arrays;
+
+public class justPractice {
+
+	public static void main(String[] args) {
+		int[] programOne ={1, 2, 3};
+		System.out.println(programOne[0]);
+		System.out.println(programOne[1]);
+		System.out.println(programOne[2]);
+
+		int[] programTwo= {13, 5, 7, 68, 2};
+		System.out.println(programTwo[2]);
+		
+		String[] programThree= {"red", "green", "blue", "yellow"};
+		System.out.println(programThree.length);
+		String[] programThreeCopy = programThree.clone();
+		System.out.println(Arrays.toString(programThreeCopy));		
+		
+		int[] programFour = {1, 2, 3, 4, 5};
+		System.out.println(programFour[1]-1);
+		System.out.println(programFour.length - 1);
+		System.out.println(programFour.length);
+		
+		int[] programFive = new int[5];
+		for ( int i =0; i<programFive.length; i++) {
+			programFive[i]=i;
+			System.out.println(programFive[i]);
+		}
+		int[] programSix = new int[5];
+		for ( int i =0; i<programFive.length; i++) {
+			programSix[i]=i*2;
+			System.out.println(programSix[i]);
+		}
+		int[] programSeven = {1, 2, 3, 4, 5};
+		for (int i=1 ; i<programSeven.length; i++) {
+			System.out.println(programSeven[0]);
+			System.out.println(programSeven[1]);
+			System.out.println(programSeven[3]);
+			System.out.println(programSeven[4]);
+		} 
+		String[] programEight= {"red", "orange", "yellow", "green", "blue"};
+			programEight[0]= "yellow";
+			programEight[2]= "red";
+			System.out.println(programEight[0]);
+			System.out.println(programEight[2]);
+		}
+	
+		int[] programNine=new int[] {4, 2, 9, 13, 1, 0};{
+		int temp = 0;
+		{
+			for (int i = 0; i < programNine.length; i++) {     
+	            for (int j = i+1; j < programNine.length; j++) {     
+	               if(programNine[i] > programNine[j]) {    
+	                   temp = programNine[i];    
+	                   programNine[i] = programNine[j];    
+	                   programNine[j] = temp;    
+	               }} } 
+			for (int i = 0; i < programNine.length; i++) {     
+	            System.out.print(programNine[i] + " ");    
+	        }    
+			System.out.println("is this working?");
+}}
+
+		String[] mixedArray= {"Max has 2.0 dollars", "Emma has 12.42 dollars", "Emily  has no money"}; {
+			System.out.println(mixedArray[0]);
+		}}
+		
+
+
