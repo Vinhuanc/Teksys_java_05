@@ -1,0 +1,104 @@
+/////////creating tables
+
+create table medicationInfo(
+	medicationID int(10) not  primary key 
+	genericName varchar(100) not   
+	brandName varchar(100) not 
+ 
+);
+
+create table medicationUseInfo(
+	medicationID int(10) not ,
+	medicationClass varchar(100) not ,
+	mainPurpose varchar(100) not ,
+	foreign key(medicationID) references medicationInfo(medicationID)
+);
+
+create table sideEffects(
+	medicationID int(10) not ,
+	upperBody varchar(200) not ,
+	lowerBody varchar(200) not ,
+	foreign key(medicationID) references medicationInfo(medicationID)	
+);
+
+create table relatedInformation(
+	medicationID int(10) not ,
+	yearOfApproval year not ,
+	prescriptionQuantity varchar(10) not ,
+	foreign key(medicationID) references medicationInfo(medicationID)
+);
+////////insert values into tables
+Insert into medicationInfo(medicationID genericName brandName) 
+values   
+  (1,'Atorvastatin','Lipitor'),
+  (2,'Amoxicillin','Amoxil'),
+  (3,'Lisinopril','Prinivil'),
+  (4,'Levothyroxine','Synthroid'),
+  (5,'Albuterol','Ventolin'),
+  (6,'Metformin','Glucophage'),
+  (7,'Amlodipine','Norvasc'),
+  (8,'Metoprolol','Lopressor'),
+  (9,'Omeprazole','Prilosec'),
+  (10,'Losartan','Cozaar'),
+  (11,'Azithromycin','Zithromax'),
+  (12,'Prednisone','Deltasone'),
+  (13,'Ibuprofen','Advil'),
+  (14,'Hydrocodone/Acetamiophen','Norco'),
+  (15,'Gabapentin','Neurontin');
+
+Insert into medicationUseInfo(medicationID, medicationClass, mainPurpose)
+values 
+  (1,'Antihypertensive',  'Cholesterol'),
+  (2,'Penicillin',  'Antibiotic'),
+  (3,'Antihypertensive',  'Blood Pressure'),
+  (4,'Thyroid',  'Thyroid'),
+  (5,'bronchodilators',  'Asthma'),
+  (6,'Antidiabetic',  'Diabetes'),
+  (7,'Antihypertensive',  'Blood Pressure'),
+  (8,'Antihypertensive',  'Blood Pressure'),
+  (9,'Proton-pump',  'Stomach Acid'),
+  (10,'Antihypertensive',  'Blood Pressure'),
+  (11,'Antibiotic',  'Antibiotic'),
+  (12,'Anti-inflammatory',  'Inflammation'),
+  (13,'NSAID',  'Pain'),
+  (14,'Narcotic',  'Pain'),
+  (15,'Anticonvulsant',  'Seizures');
+  
+Insert into sideEffects(medicationID,upperBody,lowerBody)
+values
+  (1,'Drowsiness, Fever, Appetite changes, Sleep changes',  'Diarrhea, Constipation'),
+  (2,'Stomach changes, Chest pain, Bloating, Headache',  'Constipation, Leg pain'),
+  (3,'Dizziness, Headache, Nausea',  'Diarrhea, Constipation' ),
+  (4,'Weight change, Vomiting, Headache, Fever',  'Diarrhea, Constipation' ),
+  (5,'Headache, Lung pain, Heart rate change',  'Urine change'),
+  (6,'Heartburn, Nausea, ',  'Diarrhea, Constipation, Gas' ),
+  (7,'Drowsiness, Nausea, Stomach pain, Headache',  'Diarrhea' ),
+  (8,'Dry mouth, Dizziness, Headache, Nausea',  'Constipation, Diarrhea, Gas' ),
+  (9,'Headache, Nausea, Stomach pain,',  'Constipation, Diarrhea' ),
+  (10,'Vision change, Hear beat change, Stomach pain, Dizziness',  'Weakness of legs' ),
+  (11,'Nausea, Appetite change, Dizziness',  'Diarrhea' ),
+  (12,'Headache, Dizziness, Sleep changes',  'Diarrhea' ),
+  (13,'Thirst, Headache, Vision change, Sleep change',  'Fluid retention, Ankle swelling' ),
+  (14,'Nausea, Vomiting, Dizziness',  'Constipation' ),
+  (15,'Dry mouth, Nausea, Vision change',  'Diarrhea, Swolleness of legs' );
+  
+Insert into relatedInformation(medicationID,yearOfApproval,prescriptionQuantity)
+values
+(1,1996,'24,493,971'  ),
+  (2,1972,'20,368,921'  ),
+  (3,1978,'19,990,170'  ),
+  (4,1927,'19,698,087'  ),
+  (5,1972,'19,085,418'  ),
+  (6,1922,'17,430,765'  ),
+  (7,1982,'16,419,181'  ),
+  (8,1969,'15,177,787'  ),
+  (9,1979,'12,869,290'  ),
+  (10,1986,'11,760,646'  ),
+  (11,1980,'11,577,286'  ),
+  (12,1954,'10,999,246'  ),
+  (13,1961,'10,951,995'  ),
+  (14,1923,'10,409,764'  ),
+  (15,1993,'9,818,634'  );
+
+
+
