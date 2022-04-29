@@ -1,6 +1,191 @@
 package com.perscholas.cafe;
 
-public class Product {
+import java.util.Scanner;
+
+public class CafeApp {
+
+	public static void main(String[] args) {
+		Product coffee = new Coffee("Coffee", 1.00, "Black coffee", false, false);
+		Product espresso = new Espresso("espresso", 1.99, "espresso coffee",true, true);
+		Product cuppuccino = new Cuppuccino("cuppuccino", 2.99, "cuppuccino coffee",true, false);
+
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Here is the menu, please select from the following:");
+		System.out.println("1: coffee");
+		System.out.println("2: espresso");
+		System.out.println("3: cuppuccino");
+			
+		System.out.format("How much %s do you want to buy?\n", coffee.getName());
+		coffee.setQuantity(userInput.nextInt());
+		System.out.format("name: %s \n description: %s \n quantity: %s \n productSubTotal: %.2f\n", coffee.getName(),
+				coffee.getDescription(),coffee.getQuantity(), coffee.calculateProductTotal());
+
+		System.out.format("How much %s do you want to buy?\n", espresso.getName());
+		espresso.setQuantity(userInput.nextInt());
+		System.out.println("Would you like to add extra Shots?");
+
+		System.out.format("name: %s \n description: %s \n quantity: %s \n %s productSubTotal: %s \n", espresso.getName(),
+				espresso.getDescription(),espresso.getQuantity(),espresso.addOptions(), espresso.calculateProductTotal());
+
+		System.out.format("How much %s do you want to buy?\n", cuppuccino.getName());
+		cuppuccino.setQuantity(userInput.nextInt());
+		System.out.format("name: %s \n description: %s \n quantity: %s \n productSubTotal: %.2f\n", cuppuccino.getName(),
+				cuppuccino.getDescription(),cuppuccino.getQuantity(), cuppuccino.calculateProductTotal());
+		
+		double subtotal = coffee.calculateProductTotal() + espresso.calculateProductTotal()
+				+ cuppuccino.calculateProductTotal();
+		double tax = subtotal * 0.10;
+		double total = subtotal + tax;
+
+		System.out.format("The subtotal is: %.2f , The tax is: %.2f, The total is:  %.2f\n", subtotal, tax, total);
+		System.out.print("proceed to Checkout");
+	}
+
+}
+
+package com.perscholas.cafe;
+
+public class Cuppuccino extends Product {
+	private boolean peppermint;
+	private boolean whippedCream;
+
+	public Cuppuccino() {
+		super();
+		this.peppermint = false;
+		this.whippedCream = false;
+	}
+
+	public Cuppuccino(String name, double price, String description, boolean peppermint, boolean whippedCream) {
+		super(name, price, description);
+		this.peppermint = peppermint;
+		this.whippedCream = whippedCream;
+	}
+
+	public boolean isPeppermint() {
+		return peppermint;
+	}
+
+	public void setPeppermint(boolean peppermint) {
+		this.peppermint = peppermint;
+	}
+
+	public boolean isWhippedCream() {
+		return whippedCream;
+	}
+
+	public void setWhippedCream(boolean whippedCream) {
+		this.whippedCream = whippedCream;
+	}
+
+	@Override
+	public double calculateProductTotal() {
+		double pricePerItem = this.getPrice();
+		if (peppermint) {
+			pricePerItem += 2;
+		}
+		if (whippedCream) {
+			pricePerItem += 1;
+		}
+		double total = this.getQuantity() * pricePerItem;
+		return total;
+
+	}
+
+	@Override
+	public String addOptions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String printOptions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}
+package com.perscholas.cafe;
+
+public class Coffee extends Product {
+
+	private boolean hasMilk;
+	private boolean hasSugar;
+	
+	
+	public Coffee() {
+		super();
+		this.hasMilk = false;
+		this.hasSugar = false;
+	}
+	
+
+
+	public Coffee(String name, double price, String description, boolean hasMilk, boolean hasSugar) {
+		super(name, price, description);
+		this.hasMilk=hasMilk;
+		this.hasSugar=hasSugar;
+	}
+
+
+
+	public boolean isHasMilk() {
+		return hasMilk;
+	}
+
+
+
+	public void setHasMilk(boolean hasMilk) {
+		this.hasMilk = hasMilk;
+	}
+
+
+
+	public boolean isHasSugar() {
+		return hasSugar;
+	}
+
+
+
+	public void setHasSugar(boolean hasSugar) {
+		this.hasSugar = hasSugar;
+	}
+
+
+
+	@Override
+	public double calculateProductTotal() {
+		// TODO Auto-generated method stub
+		return this.getPrice() * this.getQuantity();
+	}
+
+
+
+	@Override
+	public String addOptions() {
+		if(true) {
+			System.out.print("add $2");
+			calculateProductTotal();
+		}
+		return null;
+	}
+
+
+
+	@Override
+	public String printOptions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}
+package com.perscholas.cafe;
+
+import java.util.Scanner;
+
+public abstract class Product {
 	private String name;
 	private double price;
 	private String description;
@@ -48,53 +233,113 @@ public class Product {
 		this.quantity = quantity;
 	}
 
-	public double calculateProductTotal() {
-		return quantity * price;
-
+	public abstract double calculateProductTotal();
+	
+	public String addOptions() {
+		return null;
 	}
+	public abstract String printOptions();
 }
-
-
-
-
-
-
 package com.perscholas.cafe;
 
-import java.util.Scanner;
+public class Espresso extends Product {
+	private boolean extraShot;
+	private boolean macchiato;
 
-public class CafeApp {
+	public Espresso() {
+		this.extraShot = false;
+		this.macchiato = false;
+	}
 
-	public static void main(String[] args) {
-		Product coffee = new Product("Coffee", 1.00, "Black coffee");
-		Product espresso = new Product("espresso", 1.99, "espresso coffee");
-		Product cuppuccino = new Product("cuppuccino", 2.99, "cuppuccino coffee");
+	public Espresso(String name, double price, String description, boolean extraShot, boolean macchiato) {
+		super(name, price, description);
+		this.extraShot = extraShot;
+		this.macchiato = macchiato;
+	}
 
-		Scanner userInput = new Scanner(System.in);
+	public boolean isExtraShot() {
+		return extraShot;
+		
+		}
+	
 
-		System.out.format("How much %s do you want to buy?\n", coffee.getName());
-		coffee.setQuantity(userInput.nextInt());
-		System.out.format("name: %s \n description: %s \n productSubTotal: %.2f\n", coffee.getName(),
-				coffee.getDescription(), coffee.calculateProductTotal());
+	public void setExtraShot(boolean extraShot) {
+		this.extraShot = extraShot;
+	}
 
-		System.out.format("How much %s do you want to buy?\n", espresso.getName());
-		espresso.setQuantity(userInput.nextInt());
-		System.out.format("name: %s \n description: %s \n productSubTotal: %.2f\n", espresso.getName(),
-				espresso.getDescription(), espresso.calculateProductTotal());
+	public boolean isMacchiato() {
+		return macchiato;
+	}
 
-		System.out.format("How much %s do you want to buy?\n", cuppuccino.getName());
-		cuppuccino.setQuantity(userInput.nextInt());
-		System.out.format("name: %s \n description: %s \n productSubTotal: %.2f\n", cuppuccino.getName(),
-				cuppuccino.getDescription(), cuppuccino.calculateProductTotal());
+	public void setMacchiato(boolean macchiato) {
+		this.macchiato = macchiato;
+	}
 
-		double subtotal = coffee.calculateProductTotal() + espresso.calculateProductTotal()
-				+ cuppuccino.calculateProductTotal();
-		double tax = subtotal * 0.10;
-		double total = subtotal + tax;
+	@Override
+	public double calculateProductTotal() {
+		// TODO Auto-generated method stub
+		double pricePerItem = this.getPrice();
+		if (extraShot) {
+			pricePerItem += 2;
+		}
+		if (macchiato) {
+			pricePerItem += 1;
+		}
+		double total = this.getQuantity() * pricePerItem;
+		return total;
+	}
 
-		System.out.format("The subtotal is: %.2f , The tax is: %.2f, The total is:  %.2f\n", subtotal, tax, total);
+	@Override
+	public String addOptions() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
+	@Override
+	public String printOptions() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
+package com.perscholas.cafe;
 
+public class Store {
+	String name;
+	Double price;
+	public Store(String name, Double price) {
+		super();
+		this.name = name;
+		this.price = price;
+	}
+	
+	Store strawberryCake = new Store("strawberry Cake", 1.25);
+	Store cheeseCake = new Store("cheese Cake" , 2.55);
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+	public void cauculatePrice() {
+		
+	}
+
+}
+package com.perscholas.cafe;
+
+public class strawberryCake extends Store{
+
+	public strawberryCake(String name, Double price) {
+		super(name, price);
+		
+	}
+
+}
