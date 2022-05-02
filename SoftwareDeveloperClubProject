@@ -1,0 +1,173 @@
+package softwareDeveloperClubProject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ClubMember {
+	String name;
+	String location;
+	String favLanguage;
+
+	public ClubMember(String name, String location, String favLanguage) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.favLanguage = favLanguage;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getFavLanguage() {
+		return favLanguage;
+	}
+	public void setFavLanguage(String favLanguage) {
+		this.favLanguage = favLanguage;
+	}
+}
+	
+  
+  package softwareDeveloperClubProject;
+
+public class SoftwareDeveloperClub {
+	String name;
+	String location;
+	String favLanguage;
+	public SoftwareDeveloperClub(String name, String location, String favLanguage) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.favLanguage = favLanguage;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getFavLanguage() {
+		return favLanguage;
+	}
+	public void setFavLanguage(String favLanguage) {
+		this.favLanguage = favLanguage;
+	}
+	public String introduction() {
+		return getName() + "," + getLocation() + ","+ " "+ getFavLanguage() ;
+	}
+	
+	
+	
+	
+	
+}
+package softwareDeveloperClubProject;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ClubMemberApp {
+static Scanner userInput = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		SoftwareDeveloperClub member1 = new SoftwareDeveloperClub("John", "Dallas, TX", "Java");
+		SoftwareDeveloperClub member2 = new SoftwareDeveloperClub("Jane", "Fort Worth, TX", "Python");
+		SoftwareDeveloperClub member3 = new SoftwareDeveloperClub("James", "Tulsa, OK", "Ruby");
+		SoftwareDeveloperClub member4 = new SoftwareDeveloperClub("Joan", "New York, NY", "JavaScript");
+		SoftwareDeveloperClub member5 = new SoftwareDeveloperClub("Jose", "Tampa, FL", "C++");
+		
+		List<String> clubMembers = new ArrayList<String>();
+		clubMembers.add("John " + "Dallas, TX " + "Java");
+		clubMembers.add("Jane "+ "Fort Worth, TX "+ "Python");
+		clubMembers.add("James "+ "Tulsa, OK "+ "Ruby");
+		clubMembers.add("Joan " +"New York, NY "+ "JavaScript");
+		clubMembers.add("Jose "+ "Tampa, FL "+ "C++");
+		
+		
+	
+	
+	System.out.print("Select from the following menu: \n 1: Display Members \n 2. Remove Member \n 3. Add member \n 4. Quit \n");
+	
+	int userChoiceNumber = userInput.nextInt(); 
+	switch(userChoiceNumber) {
+	case 1:{
+		System.out.println(member1.introduction());
+		System.out.println(member2.introduction());
+		System.out.println(member3.introduction());
+		System.out.println(member4.introduction());
+		System.out.println(member5.introduction());
+		break;}
+	case 2: {
+		System.out.print("Which member would you like to remove?");
+		int userMemberToRemove = userInput.nextInt();
+		if(userMemberToRemove ==1) {
+			clubMembers.remove(0);
+		}
+		if(userMemberToRemove==2) {
+			clubMembers.remove(1);
+		}
+		if(userMemberToRemove==3) {
+			clubMembers.remove(2);
+		}
+		if(userMemberToRemove==4) {
+			clubMembers.remove(3);
+		}
+		System.out.print("Successfully removed \n");
+		System.out.print(clubMembers);
+		break;
+	}
+	case 3: {
+		System.out.println("Please enter a name of the member to be added");
+		String newMemberName = userInput.next();	
+		
+		System.out.println("Please enter a location of the member to be added.");
+		String newMemberLocation = userInput.next();
+		
+		System.out.println("Please enter a favorite language of the member to be added.");
+		String newMemberFavoriteLanguage = userInput.next();
+		
+		clubMembers.add(newMemberName+" " + newMemberLocation +" "+ newMemberFavoriteLanguage);
+		System.out.print(clubMembers);
+		break;
+	}
+	case 4: {
+		System.out.print("Goodbye! \n");
+		
+	}
+	System.out.print(clubMembers);
+	userInput.close();
+
+	
+	
+	
+	
+	}}
+
+	
+	
+		
+	}
+	
+		
+	
+	
+		
+		
+	
+	
+  
+  
