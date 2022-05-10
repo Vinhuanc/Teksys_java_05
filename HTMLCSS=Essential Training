@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  
+  <body>
+    <div>
+      Register a login here
+      <br />
+      <label for="First Name"> First Name:</label>
+      <input id="First Name" type="textbox" />
+      <br />
+      <label for="Last Name"> Last Name:</label>
+      <input id="Last Name" type="textbox" />
+      <br />
+      <label for="email"> Email:</label>
+      <input id="email" type="textbox" />
+      <br />
+      <label for="password"> Password:</label>
+      <input id="password" type="textbox" />
+      <br />
+      <label for="Confirm password"> Confirm Password:</label>
+      <input id="Confirm password" type="textbox" />
+      <br />
+      <label for="gender"> Gender:</label>
+      <input id="gender" type="radio" /> Female
+      <input id="gender" type="radio" /> Male
+      <br />
+      <label for="dob"> Date Of Birth</label>
+      <input id="dob" type="date" />
+      <br />
+      <label for="habits"> Habits:</label>
+      <input id="gender" type="checkbox" /> You like sports
+      <input id="gender" type="checkbox" /> You like to eat
+      <input id="gender" type="checkbox" /> You like to sleep
+      <br />
+      <button type="submit">Register</button>
+    </div>
+<hr>
+    <div>
+      <strong>Login Page</strong>
+      <br />
+      <label for="email"> Email:</label>
+      <input id="email" type="textbox" />
+      <br />
+      <label for="password"> Password:</label>
+      <input id="password" type="textbox" />
+      <br />
+      <button type="submit"> Register</button>
+    </div>
+<hr>
+    <div>
+      <header>  <a href="#" > Logo HERE</a></header>
+        <ul>
+          <li><u> <a href="#" >Home</a></u></li>
+          <li><u> <a href="#" >About</a></u></li>
+            <ul>
+              <li><u> <a href="#" >Company</a></u></li>
+              <li><u> <a href="#" >Partners</a></u></li>
+              <li><u> <a href="#" >Our People</a></u></li>
+            </ul>
+          <li><u> <a href="#" >Personal Projects</a></u></li>
+          <li><u> <a href="#" >Contact</a></u></li>
+    </div>
+  </body>
+</html>
