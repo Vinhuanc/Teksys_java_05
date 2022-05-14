@@ -1,0 +1,27 @@
+
+<persistence version="2.0"
+    xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    
+    
+    <persistence-unit name="SMS" >
+    	<class>jpa.entitymodels.Course</class>
+		<class>jpa.entitymodels.Student</class>
+       
+        
+        <properties>
+            <!-- Driver for DB database -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <!-- URL for DB -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/SchoolManagementSystem" />
+            <!-- Username -->
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <!-- Password -->
+            <property name="javax.persistence.jdbc.password" value="74752002Chen!" />
+        </properties>
+    </persistence-unit>
+    
+</persistence>
+
+
