@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+    <link rel="styleSheet" href="./styleSheet.css" />
+    <p>
+        <div style="float:left"> 
+    <img  src="https://images.unsplash.com/photo-1587402092301-725e37c70fd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHVwcHklMjBkb2d8ZW58MHx8MHx8&w=1000&q=80" 
+    width=100px height=150px  >
+        </div>
+    <div  class="name" style="text-align: left " >Cindy Chen 
+              
+              
+    </div>
+    <div  class="position" style="text-align: left;" >Software Engineer</div>
+    <div class="leftQuestions" style="text-align:center"> Name:</div>
+    <div class="leftQuestions" style="text-align:center"> Phone:</div>
+    <div class="leftQuestions" style="text-align:center"> Address:</div>
+    <div class="leftQuestions" style="text-align:center"> Email:</div>
+    <div class="leftQuestions" style="text-align:center"> Website:</div>
+<div class="bio" > Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ab vel commodi iure temporibus, quaerat rerum. 
+    Porro ut explicabo corporis accusamus deserunt ducimus voluptas quo,
+     alias ullam quidem vero nulla itaque?</div>
+   
+
+
+
+</p>
+</html>
+
+
+//StyleSheet
+.name, .position{
+    color: black;
+    font-size:x-large ;
+    flex-wrap: wrap; 
+    display:inline-block;
+}
+.position{
+    font-size: small;
+    display: block;
+}
+.leftQuestions{
+    color:black;
+   display: block;
+    display: block;
+}
+.bio{
+    color:black;
+    margin: 10px;
+    padding: 20px;
+    text-align:left;
+    
+}
