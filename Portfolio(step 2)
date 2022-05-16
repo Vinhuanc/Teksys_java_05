@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+    <link rel="styleSheet" href="./styleSheet.css" />
+    <p>
+        <div style="float:left"> 
+    <img  src="https://images.unsplash.com/photo-1587402092301-725e37c70fd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHVwcHklMjBkb2d8ZW58MHx8MHx8&w=1000&q=80" 
+    width=100px height=150px  >
+        </div>
+    <div  class="name" style="text-align: left " >Cindy Chen 
+              
+              
+    </div>
+    <div  class="position" style="text-align: left;" >Software Engineer</div>
+    <div class="leftQuestions" style="text-align:center" > Name:</div>
+    <div class="leftQuestions" style="text-align:center"> Phone:</div>
+    <div class="leftQuestions" style="text-align:center"> Address:</div>
+    <div class="leftQuestions" style="text-align:center"> Email:</div>
+    <div class="leftQuestions" style="text-align:center"> Website:</div>
+<div class="bio" > Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+    Ab vel commodi iure temporibus, quaerat rerum. 
+    Porro ut explicabo corporis accusamus deserunt ducimus voluptas quo,
+     alias ullam quidem vero nulla itaque?</div>
+   <div class="employment_title" > Employment
+     <div class="programming_skills">programming skills</div>
+<div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+
+<ul>
+    <li> There are many variations of passages</li>
+            <div>Director Of Department</div>
+            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Expedita error non dolore tenetur ipsum nostrum ex.
+                 Facere minima, tempora laborum pariatur labore aspernatur iste.
+                  Eos, cum! Aliquam nostrum laborum commodi.</div>
+    <li>Cooper Union</li>
+                <div>Graphic skills</div>
+                <div>Programmer</div>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Rem quidem aliquam tempore autem, nihil eius, labore officia alias quasi iusto aut! 
+                    Distinctio iusto voluptas reprehenderit dolorem porro nam nihil non!</div>
+</ul>
+<div class="employment_title"> Education
+  
+</div>    
+
+<ul>
+    <li>Lorem Contrary to popular belief</li>
+        <div>Web Design</div>
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Neque iusto quis dolor libero nisi, nobis harum a quo, excepturi, 
+             commodi maiores deleniti officia exercitationem quasi numquam at quaerat eligendi. 
+            Necessitatibus.</div>
+    <li>Lorem Lpsum is simply dummy text</li>
+        <div>Graphic Design</div>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Doloribus quam consectetur repellat molestiae impedit in consequatur ab rerum, aliquid,
+             ea magnam ex inventore dolorum possimus nostrum deleniti alias fuga. At.</div>
+</ul>
+  
+    
+
+
+
+
+
+
+
+
+
+
+</p>
+</html>
+
+
+//Stylesheet
+
+.name, .position{
+    color: black;
+    font-size:x-large ;
+    flex-wrap: wrap; 
+    display:inline-block;
+}
+.position{
+    font-size: small;
+    display: block;
+}
+.leftQuestions{
+    color:black;
+   display: block;
+    display: block;
+}
+.bio{
+    color:black;
+    margin: 10px;
+    padding: 20px;
+    text-align:left;
+    
+}
+.employment_title{
+    font-size: x-large;
+
+}
+li{
+    font-size: x-large;
+    margin-top: 0px;
+}
+.progress-bar{
+    background-color:purple;
+    color: white;
+   margin-left: 490px;
+   border: 1px solid black;
+   border-style: groove;
+
+}
+.programming_skills{
+    text-align: right;
+    margin-right: 20px;
+    font-size: large;
+    border: solid black;
+    border-width: 2px;
+    margin-left: 460px;
+    block-size: 20px;
+  
+}
+.skills{
+    margin-right: 40px;
+}
