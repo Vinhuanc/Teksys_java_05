@@ -28,7 +28,7 @@ create table relatedInformation(
 	foreign key(medicationID) references medicationInfo(medicationID)
 );
 ////////insert values into tables
-Insert into MedicationInfo(medicationID genericName brandName) 
+Insert into MedicationInfo(medicationID, genericName, brandName) 
 values   
   (1,'Atorvastatin','Lipitor'),
   (2,'Amoxicillin','Amoxil'),
@@ -84,21 +84,21 @@ values
   
 Insert into RelatedInformation(medicationID,yearOfApproval,prescriptionQuantity)
 values
-(1,1996,'24,493,971'  ),
-  (2,1972,'20,368,921'  ),
-  (3,1978,'19,990,170'  ),
-  (4,1927,'19,698,087'  ),
-  (5,1972,'19,085,418'  ),
-  (6,1922,'17,430,765'  ),
-  (7,1982,'16,419,181'  ),
-  (8,1969,'15,177,787'  ),
-  (9,1979,'12,869,290'  ),
-  (10,1986,'11,760,646'  ),
-  (11,1980,'11,577,286'  ),
-  (12,1954,'10,999,246'  ),
-  (13,1961,'10,951,995'  ),
-  (14,1923,'10,409,764'  ),
-  (15,1993,'9,818,634'  );
+(1,1996,24493971  ),
+  (2,1972,20368,921  ),
+  (3,1978,19990170  ),
+  (4,1927,19698087  ),
+  (5,1972,19085418  ),
+  (6,1922,17430765  ),
+  (7,1982,16419181  ),
+  (8,1969,15177787  ),
+  (9,1979,12869290  ),
+  (10,1986,11760646  ),
+  (11,1980,11577286  ),
+  (12,1954,10999246  ),
+  (13,1961,10951995  ),
+  (14,1923,10409764  ),
+  (15,1993,9818634  );
 
 
 
