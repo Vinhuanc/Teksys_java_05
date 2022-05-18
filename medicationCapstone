@@ -28,7 +28,7 @@ create table relatedInformation(
 	foreign key(medicationID) references medicationInfo(medicationID)
 );
 ////////insert values into tables
-Insert into medicationInfo(medicationID genericName brandName) 
+Insert into MedicationInfo(medicationID genericName brandName) 
 values   
   (1,'Atorvastatin','Lipitor'),
   (2,'Amoxicillin','Amoxil'),
@@ -46,7 +46,7 @@ values
   (14,'Hydrocodone/Acetamiophen','Norco'),
   (15,'Gabapentin','Neurontin');
 
-Insert into medicationUseInfo(medicationID, medicationClass, mainPurpose)
+Insert into MedicationUseInfo(medicationID, medicationClass, mainPurpose)
 values 
   (1,'Antihypertensive',  'Cholesterol'),
   (2,'Penicillin',  'Antibiotic'),
@@ -64,7 +64,7 @@ values
   (14,'Narcotic',  'Pain'),
   (15,'Anticonvulsant',  'Seizures');
   
-Insert into sideEffects(medicationID,upperBody,lowerBody)
+Insert into SideEffects(medicationID,upperBody,lowerBody)
 values
   (1,'Drowsiness, Fever, Appetite changes, Sleep changes',  'Diarrhea, Constipation'),
   (2,'Stomach changes, Chest pain, Bloating, Headache',  'Constipation, Leg pain'),
@@ -82,7 +82,7 @@ values
   (14,'Nausea, Vomiting, Dizziness',  'Constipation' ),
   (15,'Dry mouth, Nausea, Vision change',  'Diarrhea, Swolleness of legs' );
   
-Insert into relatedInformation(medicationID,yearOfApproval,prescriptionQuantity)
+Insert into RelatedInformation(medicationID,yearOfApproval,prescriptionQuantity)
 values
 (1,1996,'24,493,971'  ),
   (2,1972,'20,368,921'  ),
