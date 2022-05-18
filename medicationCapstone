@@ -85,7 +85,7 @@ values
 Insert into RelatedInformation(medicationID,yearOfApproval,prescriptionQuantity)
 values
 (1,1996,24493971  ),
-  (2,1972,20368,921  ),
+  (2,1972,20368921  ),
   (3,1978,19990170  ),
   (4,1927,19698087  ),
   (5,1972,19085418  ),
