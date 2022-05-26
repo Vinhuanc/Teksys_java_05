@@ -1,0 +1,142 @@
+/* have more than 5 CSS selectors, fits the CSS selector requirement */
+
+.header {
+  font-family: cursive;
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 50px;
+  color: black;
+}
+
+.images {
+  width: 350px;
+  height: 350px;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(28, 28, 86);
+}
+
+li {
+  font-size: x-large;
+  font-family: monospace;
+}
+
+a:hover {
+  color: red;
+ 
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(182, 99, 182);
+}
+
+#print:visited{
+  color: rgb(182, 99, 182);
+}
+
+button {
+  font-size: medium;
+  margin-left: 30px;
+  color: black;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: 350px;
+  padding-bottom: 500px;
+  text-align: center;
+}
+tr {
+  border: solid;
+  border-width: 1px;
+  width: 25%;
+}
+th {
+  width: 25%;
+  text-align: center;
+}
+.gif{
+  width: 350px;
+  height: 350px;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  size: auto;
+}
+.form-box{
+  width:350px;
+  height: 200px;
+  border: 1px solid black;
+  /* margin-right: 20px; */
+  display:inline-block;
+ } 
+
+ .website-feedback-box{
+   top:20px;
+ }
+  
+
+.suggestions{
+  margin-bottom: 10px;
+}
+.feedbacks{
+  margin-bottom: 10px;
+}
+.other-messages{
+  margin-top: 10px;
+}
+.spot-title{
+  font-family:cursive;
+}
+.li-spot-title{
+  font-family: monospace;
+}
+.blue-box{
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(213, 214, 234);
+  background-color: rgb(213, 214, 234);
+  display: inline-block;
+  
+}
+.pink-box{
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(245, 213, 203);
+  background-color: rgb(245, 213, 203);
+  display: inline-block;
+  margin-left: 25px;
+  margin-bottom: 0px;
+  
+  
+}
+.green-box{
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(215, 236, 217);
+  background-color: rgb(215, 236, 217);
+  display: inline-block;
+  
+  
+}
+.purple-box{
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(243, 221, 242);
+  background-color: rgb(243, 221, 242);
+  display: inline-block;
+  
+}
+.pink-box:hover, .blue-box:hover, .green-box:hover, .purple-box:hover{
+  transform: scale(1.25);
+}
