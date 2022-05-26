@@ -1,12 +1,36 @@
 This file is a READme file for TEksystem's HTML/CSS/JavaScript SBA
 
 Technical specifications:
+Used HTML, CSS, and JavaScript for this projct. Used HTML to style and write into the websites for users to view, used CSS to style the content for users
+to view, and used JavaScript to give buttons and forms behaviors.
 
+The technicial requirements of this website has been included in the website.
 
 
 
 Description of website:
+This website is created to show users a few of "must visit" places on Earth. The website shows few of the "most-worthy to visit", "most popular vocation 
+spot", and the "prettiest nature spots of the world" to users. It gives the users an idea of where to visit for their next vocation, including some popular
+pictures about the place, historical information about the place, and the link to book a flight.
+
+This website starts with the title of the vocation spot, then leads a short historical introduction about the place, then shows some popular pictures about 
+the place, then an option to learn more information on wikipedia or directly book a flight. Lastly with the option to see what other places this website
+has included.
+
+This website allows users to add their vocation spot recommendations, including the city, country, and continent of that recommended travel place.
+
+This website allows the user to give feedback of this website, includes any suggestions, feedbacks, and other messages.
+
+This website has colored boxes, when the user clicks on any of the boxes, it displays a message of recommended vocation spot based on the selected color
+box.
+
+The overall idea of this website is to give website visitors an idea of where to travel to for their next vocation.
+
 
 
 
 Github link: 
+https://github.com/Vinhuanc/Teksys_java_05/tree/main
+
+
+
