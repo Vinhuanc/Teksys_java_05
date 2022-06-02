@@ -1,0 +1,205 @@
+package com.example.cindychen.medication.capstone.controllers;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.cindychen.medication.capstone.models.MedicationInfo;
+import com.example.cindychen.medication.capstone.models.MedicationUseInfo;
+import com.example.cindychen.medication.capstone.models.RelatedInformation;
+import com.example.cindychen.medication.capstone.models.SideEffects;
+import com.example.cindychen.medication.capstone.repository.MedicationInfoRepository;
+import com.example.cindychen.medication.capstone.repository.MedicationUseInfoRepository;
+import com.example.cindychen.medication.capstone.repository.RelatedInformationRepository;
+import com.example.cindychen.medication.capstone.repository.SideEffectsRepository;
+
+@Controller
+@RequestMapping(path = "/")
+public class MainController {
+
+	Logger logger = LoggerFactory.getLogger(MainController.class);
+
+	@Autowired
+	private MedicationInfoRepository medicationInfoRepository;
+	@Autowired
+	private MedicationUseInfoRepository medicationUseInfoRepository;
+	@Autowired
+	private RelatedInformationRepository relatedInformationRepository;
+	@Autowired
+	private SideEffectsRepository sideEffectsRepository;
+	
+	
+	
+	
+	@GetMapping(path = "/HomePage")
+	public String showHomePage() {
+		return "HomePage";
+	}
+
+	@GetMapping(path = "/FirstPage")
+	public String showFirstPage() {
+		return "FirstPage";
+	}
+	
+	@PostMapping(path = "/add-new-med")
+	public @ResponseBody String addNewMedication(@RequestParam String genericName, @RequestParam String brandName, 
+			@RequestParam String medicationClass, @RequestParam String mainPurpose, @RequestParam Long prescriptionQuantity,
+			@RequestParam Integer yearOfApproval, @RequestParam String introduction, @RequestParam String URL,
+			@RequestParam String lowerBody, @RequestParam String upperBody) {
+		
+			
+		MedicationInfo newMed1 = new MedicationInfo();
+		MedicationUseInfo newMed2 = new MedicationUseInfo();
+		RelatedInformation newMed3 = new RelatedInformation();
+		SideEffects newMed4 = new SideEffects();
+		
+		newMed1.setGenericName(genericName);
+		newMed1.setBrandName(brandName);
+		newMed2.setMedicationClass(medicationClass);
+		newMed2.setMainPurpose(mainPurpose);
+		newMed3.setprescriptionQuantity(prescriptionQuantity);
+		newMed3.setYearOfApproval(yearOfApproval);
+		newMed3.setIntroduction(introduction);
+		newMed3.setURL(URL);
+		newMed4.setLowerBody(lowerBody);
+		newMed4.setUpperBody(upperBody);
+		
+		medicationInfoRepository.save(newMed1);
+		medicationUseInfoRepository.save(newMed2);
+		relatedInformationRepository.save(newMed3);
+		sideEffectsRepository.save(newMed4);
+
+		logger.info("The generic name of the new medication is: " + genericName);
+		logger.info("The brand name of the new medication is: " + brandName);
+		logger.info("The medication class of the new medication is: " + medicationClass);
+		logger.info("The main purpose of the new medication is: " + mainPurpose);
+		logger.info("The prescription quantity of the new medication is: " + prescriptionQuantity);
+		logger.info("The year of approval of the new medication is: " + yearOfApproval);
+		logger.info("The introduction of the new medication is: " + introduction);
+		logger.info("The URL of the new medication is: " + URL);
+		logger.info("The lower body side effects of the new medication is: " + lowerBody);
+		logger.info("The upper body side effects of the new medication is: " + upperBody);
+
+		
+		
+		
+		if (logger.isDebugEnabled()) {
+			logger.debug("Need to debug from MedicationInfoController" + newMed1 + newMed2 + newMed3 + newMed4);
+		}
+		return "Successfully saved new medication!";
+//		return "AddMedicationForm";
+	}
+
+	@GetMapping(path = "/getall")
+	public @ResponseBody Iterable<MedicationInfo> getAllMedications() {
+		return medicationInfoRepository.findAll();
+	}
+	
+	
+	
+	
+//	***************Request mapping for all inner links***************
+	@RequestMapping("/HomePage")
+	public String HomePage() {
+		return "HomePage";
+	}
+
+	@RequestMapping("/FirstPage")
+	public String FirstPage() {
+		return "FirstPage";
+	}
+
+	@RequestMapping("/AtorvastatinPage")
+	public String AtorvastatinPage() {
+		return "AtorvastatinPage";
+	}
+
+	@RequestMapping("/AmoxicillinPage")
+	public String AmoxicillinPage() {
+		return "AmoxicillinPage";
+	}
+
+	@RequestMapping("/LisinoprilPage")
+	public String LisinoprilPage() {
+		return "LisinoprilPage";
+	}
+
+	@RequestMapping("/LevothyroxinePage")
+	public String LevothyroxinePage() {
+		return "LevothyroxinePage";
+	}
+
+	@RequestMapping("/AlbuterolPage")
+	public String AlbuterolPage() {
+		return "AlbuterolPage";
+	}
+
+	@RequestMapping("/MetforminPage")
+	public String MetforminPage() {
+		return "MetforminPage";
+	}
+
+	@RequestMapping("/AmlodipinePage")
+	public String AmlodipinePage() {
+		return "AmlodipinePage";
+	}
+
+	@RequestMapping("/MetoprololPage")
+	public String MetoprololPage() {
+		return "MetoprololPage";
+	}
+
+	@RequestMapping("/OmeprazolePage")
+	public String OmeprazolePage() {
+		return "OmeprazolePage";
+	}
+
+	@RequestMapping("/LosartanPage")
+	public String LosartanPage() {
+		return "LosartanPage";
+	}
+
+	@RequestMapping("/AzithromycinPage")
+	public String AzithromycinPage() {
+		return "AzithromycinPage";
+	}
+
+	@RequestMapping("/PrednisonePage")
+	public String PrednisonePage() {
+		return "PrednisonePage";
+	}
+
+	@RequestMapping("/IbuprofenPage")
+	public String IbuprofenPage() {
+		return "IbuprofenPage";
+	}
+
+	@RequestMapping("/HydrocodoneAndAcetaminophenPage")
+	public String HydrocodoneAndAcetaminophenPage() {
+		return "HydrocodoneAndAcetaminophenPage";
+	}
+
+	@RequestMapping("/GabapentinPage")
+	public String GabapentinPage() {
+		return "GabapentinPage";
+	}
+
+	@RequestMapping("/InnerPage")
+	public String InnerPage() {
+		return "InnerPage";
+	}
+
+	@RequestMapping("/AboutPage")
+	public String AboutPage() {
+		return "AboutPage";
+	}
+
+	
+
+}
