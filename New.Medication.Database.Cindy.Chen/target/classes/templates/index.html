@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Medication Manager</title>
+</head>
+<body>
+<div align="center">
+    <h1>Medication List</h1>
+    <a href="/new">Create New Medication</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Medication ID</th>
+                <th> Generic Name</th>
+                <th>Brand Name</th>
+                <th>Medication Class</th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="medication : ${listMedications}">
+                <td th:text="${medication.medicationID}">Medication ID</td>
+                <td th:text="${medication.genericName}">Generic Name</td>
+                <td th:text="${medication.brandName}">Brand Name</td>
+                <td th:text="${medication.medicationClass}">Medication Class</td>
+                
+                <td>
+                    <a th:href="@{'/edit/' + ${medication.medicationID}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/delete/' + ${medication.medicationID}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>
