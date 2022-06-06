@@ -51,7 +51,109 @@ public class MedicationController {
 		medicationService.delete(medicationID);
 	    return "redirect:/";       
 	}
-	
+	@RequestMapping("/HomePage")
+	public String HomePage() {
+		return "HomePage";
+	}
+
+	@RequestMapping("/Medications")
+	public String FirstPage() {
+		return "Medications";
+	}
+
+	@RequestMapping("/AtorvastatinPage")
+	public String AtorvastatinPage() {
+		return "AtorvastatinPage";
+	}
+
+	@RequestMapping("/AmoxicillinPage")
+	public String AmoxicillinPage() {
+		return "AmoxicillinPage";
+	}
+
+	@RequestMapping("/LisinoprilPage")
+	public String LisinoprilPage() {
+		return "LisinoprilPage";
+	}
+
+	@RequestMapping("/LevothyroxinePage")
+	public String LevothyroxinePage() {
+		return "LevothyroxinePage";
+	}
+
+	@RequestMapping("/AlbuterolPage")
+	public String AlbuterolPage() {
+		return "AlbuterolPage";
+	}
+
+	@RequestMapping("/MetforminPage")
+	public String MetforminPage() {
+		return "MetforminPage";
+	}
+
+	@RequestMapping("/AmlodipinePage")
+	public String AmlodipinePage() {
+		return "AmlodipinePage";
+	}
+
+	@RequestMapping("/MetoprololPage")
+	public String MetoprololPage() {
+		return "MetoprololPage";
+	}
+
+	@RequestMapping("/OmeprazolePage")
+	public String OmeprazolePage() {
+		return "OmeprazolePage";
+	}
+
+	@RequestMapping("/LosartanPage")
+	public String LosartanPage() {
+		return "LosartanPage";
+	}
+
+	@RequestMapping("/AzithromycinPage")
+	public String AzithromycinPage() {
+		return "AzithromycinPage";
+	}
+
+	@RequestMapping("/PrednisonePage")
+	public String PrednisonePage() {
+		return "PrednisonePage";
+	}
+
+	@RequestMapping("/IbuprofenPage")
+	public String IbuprofenPage() {
+		return "IbuprofenPage";
+	}
+
+	@RequestMapping("/HydrocodoneAndAcetaminophenPage")
+	public String HydrocodoneAndAcetaminophenPage() {
+		return "HydrocodoneAndAcetaminophenPage";
+	}
+
+	@RequestMapping("/GabapentinPage")
+	public String GabapentinPage() {
+		return "GabapentinPage";
+	}
+
+	@RequestMapping("/InnerPage")
+	public String InnerPage() {
+		return "InnerPage";
+	}
+
+	@RequestMapping("/AboutPage")
+	public String AboutPage() {
+		return "AboutPage";
+	}
+
+	@RequestMapping("/AddMedicationFormPage")
+	public String AddMedicationFormPage() {
+		return "AddMedicationForm";
+	}
+	@RequestMapping("/index")
+	public String showIndexPage() {
+		return "redirect:/";
+	}
 }
 
 
