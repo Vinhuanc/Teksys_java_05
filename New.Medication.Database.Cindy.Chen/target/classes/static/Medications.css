@@ -17,7 +17,7 @@
   margin-left: 40px;
   display: inline-block;
   margin-top: 40px;
-  
+   background-color: #fff8e2;
   
 }
 
@@ -47,6 +47,8 @@
 }
 .info-button{
   margin-left:40%;
+  font-size:medium;
+  
 }
 .update-button{
   margin-left: 30px;
