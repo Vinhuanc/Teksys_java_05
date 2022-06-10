@@ -50,10 +50,28 @@ values
   
   
   
+  ***************
+  
+  INSERT INTO Website
+  (medicationID,websiteURL) 
+VALUES 
+  (1,'https://www.webmd.com/drugs/2/drug-841/atorvastatin-oral/details'),
+  (2,'https://www.webmd.com/drugs/2/drug-1531-3295/amoxicillin-oral/amoxicillin-oral/details'),
+  (3,'https://www.webmd.com/drugs/2/drug-6873-9371/lisinopril-oral/lisinopril-oral/details'),
+  (4,'https://www.webmd.com/drugs/2/drug-1433-7074/levothyroxine-oral/levothyroxine-oral/details'),
+  (5,'https://www.webmd.com/drugs/2/drug-4872-1697/albuterol-sulfate-inhalation/albuterol-salbutamol-breath-activated-inhaler-oral-inhalation/details'),
+  (6,'https://www.webmd.com/drugs/2/drug-11285-7061/metformin-oral/metformin-oral/details'),
+  (7,'https://www.webmd.com/drugs/2/drug-5891/amlodipine-oral/details'),
+  (8,'https://www.webmd.com/drugs/2/drug-8814-2372/metoprolol-succinate-oral/metoprolol-succinate-extended-release-capsule-oral/details'),
+  (9,'https://www.webmd.com/drugs/2/drug-3766-2250/omeprazole-oral/omeprazole-delayed-release-tablet-oral/details'),
+  (10,'https://www.webmd.com/drugs/2/drug-6616/losartan-oral/details'),
+  (11,'https://www.webmd.com/drugs/2/drug-1527-3223/azithromycin-oral/azithromycin-250-500-mg-oral/details'),
+  (12,'https://www.webmd.com/drugs/2/drug-6007-9383/prednisone-oral/prednisone-oral/details'),
+  (13,'https://www.webmd.com/drugs/2/drug-5166-9368/ibuprofen-oral/ibuprofen-oral/details'),
+  (14,'https://www.webmd.com/drugs/2/drug-63/norco-oral/details'),
+  (15,'https://www.webmd.com/drugs/2/drug-14208-8217/gabapentin-oral/gabapentin-oral/details');
   
   
   
-  
-  
-  
+  ******************
   
