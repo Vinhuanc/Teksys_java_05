@@ -1,0 +1,18 @@
+.about-introduction{
+    text-align: flex-start;
+    font-family: monospace;
+    font-size: x-large;
+    margin-top: 40px;
+    margin-left: 120px;
+     line-height: 5.9;
+}
+.first-line{
+    line-height: 2;
+    text-align: flex-start;
+   
+    font-family: monospace;
+    font-size: x-large;
+
+    margin-left: 6em;
+    
+}

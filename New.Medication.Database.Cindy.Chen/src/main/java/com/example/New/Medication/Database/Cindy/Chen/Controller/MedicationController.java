@@ -20,7 +20,7 @@ public class MedicationController {
 	private MedicationService medicationService;
 	
 	@RequestMapping("/")
-	public String viewHomePage(Model model) {
+	public String viewIndexPage(Model model) {
 	    Iterable<Medication> listMedications = medicationService.listAll();
 	    model.addAttribute("listMedications", listMedications);
 	     
