@@ -75,3 +75,21 @@ VALUES
   
   ******************
   
+INSERT INTO Contradictions 
+  (medicationID,Contradictions) 
+VALUES 
+  (1,'Cyclosporine, Gemfibrozil, Lonafarnib, Pazopanib, Red Yeast Rice, Tipranavir'),
+  (2,'Allopurinol, Anticoagulants, Contraceptives, Antibiotics, Probenecid'),
+  (3,'Diuretics, NSAIDS, Aliskiren, Angiotensin-receptor blockers, Lithium, Sirolimus, Everolimus'),
+  (4,'Antacids, Bile Acide Sequestrates, Ion exchange resins, Proton pump inhibiotors, Phenobarbital, Rifampin, Beta blockers, Amiodarone'),
+  (5,'Methacholine, Midodrine, Linezolid, Propranolol'),
+  (6,'Diuretics, Corticosteroids, Blood Pressure Medications, Anticonvulsants, Contraceptives, Antipsychotic Medications'),
+  (7,'Simvastatin, CYP3A4 Inhibitors, Cyclosporine'),
+  (8,'Lumefantrine, Propafenone, Quinidine, SSRI Antidepressants, St.Johns Wort'),
+  (9,'Cilostazol, Clopidogrel, Methotrexate, Rifampin, St.Johns Wort'),
+  (10,'Lithium, Blood Pressure Medications, NSAIDS, Rifampin, Diuretics, Potassium Medications/Vitamins'),
+  (11,'Digoxin, Colchicine, Phenytoin, Antacids with Magnesim or Alumnum'),
+  (12,'Aldesleukin, Mifepristone, Medications that causes bleeding/bruising, NSAIDS'),
+  (13,'Lithium, Warfarin, Hypoglycemics, Methotrexate, Low Blood Pressure Medications, Angiotension-converting enzyme inhibitors, beta-blockers, diuretics'),
+  (14,'Nalmefene, Naltrexone, Safinamide, Samidorphan, Acenocoumarol, Carbamazepine, Fosphenytoin, Lixisenatide, Phenytoin, Warfarin, Zidovudine, Alvimopan'),
+  (15,'Losartan, Ethacrynic Acid, Caffeine, Phenytoin, Mefloquine, Magnesium Oxide, Cimetidine, Naproxen, Sevelamer, Morphine');
