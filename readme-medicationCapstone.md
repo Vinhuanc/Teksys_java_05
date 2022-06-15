@@ -42,8 +42,9 @@ user Stories:
 9)Had trouble testing the custom queries of each repository.
     Solution: Erik showed me the SpringFramework Guru's Introduction to Test Driven Development playlist on Youtube, was able to use and follow the examples.
     
- 
-    
+10)Had trouble running custom queries testing, queries wouldn't run, the same error of "Faild to load ApplicationContext"
+    Solution: Erik advised to change @DataJpaTest to @SpringBootTest, it worked. Also used the below resources:
+    https://www.javaguides.net/2018/09/spring-data-jpa-repository-testing-using-spring-boot-datajpatest.html
     
     
 
