@@ -33,4 +33,19 @@ user Stories:
     https://www.codejava.net/frameworks/spring-boot/spring-boot-crud-web-application-with-jdbc-thymeleaf-oracle
     https://www.javaguides.net/2020/05/spring-boot-crud-web-application-with-thymeleaf.html
     
-7)
+7)Wasn't able write the title "Hydroncodone & Acetaminophen" as like others where its bold and have a larger font. 
+    Solution: decrease the font, and made the font-lighter
+
+8)Wasn't able to write Hydrocodone&Acetaminophen as the title page of the src/java/resources, Eclipse didn't let the & to pass through, kept creating a new file.
+    Solution: changed the & to "And".
+    
+9)Had trouble testing the custom queries of each repository.
+    Solution: Erik showed me the SpringFramework Guru's Introduction to Test Driven Development playlist on Youtube, was able to use and follow the examples.
+    
+ 
+    
+    
+    
+
+
+
