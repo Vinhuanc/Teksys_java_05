@@ -28,3 +28,9 @@ user Stories:
   Solution: The file or repository I created previously was considered the "small" file of a large file. I thought it was the main file of the computer instead. So I created a new repository, and redropped and uploaded the capstone file that way.
   
 6)I wanted each columns of the current medication table splitted into four tables to fit the "four tables" requirement. But wasn't able to figure out how when a user add a new medication to the database by using thymeleaf to input into different tables. I searched a lot of different online resources, but none came up other than using a single table to input the user inputs. Then I asked Erik, and Erik mentioned that there is a way to automatecally input all of the user's inputs into different table columns. But doing it this way will be more complicated, as there has to be more controllers, mapping, endpoints, and forms to be created in order to input all the user inputs into different table columns. And that for the capstone, it will not be requireed, but in the future jobs, it will be very beneiftial to learn.
+    Solution: So then I remade a new SQL database, this time, to put all the Medication related informations within one table. Then I used the below resources to help me with the CRUD methods and other web server actions.
+    https://www.codejava.net/frameworks/spring-boot/spring-boot-thymeleaf-form-handling-tutorial
+    https://www.codejava.net/frameworks/spring-boot/spring-boot-crud-web-application-with-jdbc-thymeleaf-oracle
+    https://www.javaguides.net/2020/05/spring-boot-crud-web-application-with-thymeleaf.html
+    
+7)
